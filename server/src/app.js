@@ -20,6 +20,7 @@ function createApp() {
   app.use(
     cors({
       origin: process.env.CLIENT_ORIGIN?.split(",").map((s) => s.trim()) || true,
+     
       credentials: true,
     })
   );

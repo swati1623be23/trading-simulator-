@@ -5,6 +5,7 @@ function attachSocket(httpServer) {
   const io = new Server(httpServer, {
     cors: {
       origin: process.env.CLIENT_ORIGIN?.split(",").map((s) => s.trim()) || true,
+     
       credentials: true,
     },
   });
